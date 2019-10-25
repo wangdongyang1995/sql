@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sql.mapper.StudentMapper">
+    <select id="select" resultType="com.example.sql.entity.Student">
+        select * from student where id =#{studentId}
+    </select>
+
+    <delete id="delete" parameterType="com.example.sql.entity.Student">
+        delete from student where id =#{idd}
+    </delete>
+
+    <update id="update" parameterType="com.example.sql.entity.Student">
+        update student set name=#{name} where id =#{id}
+    </update>
+    
+    <insert id="insert" parameterType="com.example.sql.entity.Student">
+       INSERT into student (name,password,sex,age) VALUES (#{name},#{password},#{sex},#{age})
+    </insert>
+
+
+    <select id="sele" resultType="com.example.sql.entity.Student">
+        select * from student
+    </select>
+
+
+</mapper>

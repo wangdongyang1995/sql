@@ -1,0 +1,12 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: school-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/studentscon?useSSL=false&serverTimezone=UTC&driver=com.mysql.cj.jdbc.Driver&useUnicode=true&characterEncoding=utf-8
+    hikari:
+      username: root
+      password: root
