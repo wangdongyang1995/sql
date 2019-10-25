@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.sql.mapper.StudentMapper">
     <select id="select" resultType="com.example.sql.entity.Student">
-        select * from student where id =#{studentId}
+        select * from student where id =#{studentId} and name =#{name}
     </select>
 
     <delete id="delete" parameterType="com.example.sql.entity.Student">

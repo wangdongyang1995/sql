@@ -18,6 +18,12 @@ public class StudentConroller {
     public StudentConroller(StudentService studentService) {
         this.studentService = studentService;
     }
+
+
+
+
+
+
     /**
      * 获取学生列表
      * */
@@ -27,6 +33,14 @@ public class StudentConroller {
 
         return  studentService.sele(student);
     }
+
+
+    @PostMapping("liangge")
+    @ApiOperation(value = "两个参数")
+    List<Student> sel(@RequestParam("id")Long id,@RequestParam("name")String name) {
+        return studentService.select(id,name);
+    }
+
 
 
     @GetMapping("update")

@@ -5,7 +5,7 @@ import com.example.sql.entity.Student;
 import java.util.List;
 
 public interface StudentService {
-    List<Student> select(Long id);
+    List<Student> select(Long id,String name);
 
     Integer delete(Long id);
 

@@ -15,8 +15,8 @@ public class StudentServiceImpl implements StudentService {
     StudentMapper studentMapper;
 
     @Override
-    public List<Student> select(Long id) {
-        return studentMapper.select(id);
+    public List<Student> select(Long id,String name) {
+        return studentMapper.select(id,name);
     }
 
     @Override

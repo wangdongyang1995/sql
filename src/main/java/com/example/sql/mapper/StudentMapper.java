@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 @Mapper
 public interface StudentMapper {
-    List<Student> select(@Param("studentId")Long id);
+    List<Student> select(@Param("studentId")Long id,@Param("name")String name);
 
     Integer delete(@Param("idd")Long id);
 
